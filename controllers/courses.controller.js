@@ -7,3 +7,12 @@ module.exports.list = (req, res, next) => {
     })
     .catch(err => next(err))
 }
+
+
+module.exports.get = (req, res, next) => {
+  coursesService.getCourse(req.params.id)
+    .then(response => {
+      res.render('courseDetail', { course: response.data })
+    })
+    .catch(err => next (err))
+}

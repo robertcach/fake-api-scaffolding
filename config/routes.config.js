@@ -10,5 +10,6 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/courses', coursesController.list)
+router.get('/courses/:id', coursesController.get)
 
 module.exports = router;

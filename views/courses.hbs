@@ -1,10 +1,23 @@
 <h1>Courses</h1>
 
-<div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
   {{#each courses}}
-    {{this.name}} // ¿Por qué "this.name" y no courses.name?
+    <div id="course-{{this.id}}" class="col">
+      <div class="card-header">{{this.type}}</div>
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <a class="btn btn-light" href="/courses/{{this.id}}">See more</a>
+        <form class="d-inline" action="/courses/{{this.id}}/delete" method="POST">
+          <button type="submit" class="btn btn-danger">Delete SSR</button>
+        </form>
+
+      </div>
+    </div>
   {{/each}}
 </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+{{this.name}} {{!-- ¿Por qué "this.name" y no courses.name? --}}
