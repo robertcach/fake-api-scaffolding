@@ -16,3 +16,23 @@ module.exports.get = (req, res, next) => {
     })
     .catch(err => next (err))
 }
+
+module.exports.create = (req, res, next) => {
+  res.render('newCourse')
+}
+
+module.exports.doCreate = (req, res, next) => {
+  coursesService.createCourse(req.body)
+    .then((response) => {
+      res.redirect(`/courses/${response.data.id}`)
+    })
+    .catch(err => next (err))
+}
+
+module.exports.delete = (req, res, next) => {
+  coursesService.deleteCourse(req.params.id)
+    .then((response) => {
+      res.redirect('/courses')
+    })
+    .catch(err => next (err))
+}
