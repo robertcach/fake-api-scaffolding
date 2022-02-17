@@ -19,36 +19,10 @@
   ],
   "courses": [
     {
-      "id": 2,
-      "name": "WebDev",
-      "type": "Part Time"
-    },
-    {
-      "id": 3,
-      "name": "UX/UI",
-      "type": "Full Time"
+      "name": "Ux",
+      "type": "Part Time",
+      "id": 2
     }
   ],
-  "bootcamps": [
-    {
-      "id": 2,
-      "cityId": 2,
-      "courseId": 2
-    },
-    {
-      "id": 4,
-      "cityId": 4,
-      "courseId": 2
-    },
-    {
-      "id": 5,
-      "cityId": 2,
-      "courseId": 3
-    },
-    {
-      "id": 7,
-      "cityId": 1,
-      "courseId": 3
-    }
-  ]
+  "bootcamps": []
 }

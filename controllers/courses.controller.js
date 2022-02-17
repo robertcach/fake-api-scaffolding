@@ -36,3 +36,11 @@ module.exports.delete = (req, res, next) => {
     })
     .catch(err => next (err))
 }
+
+module.exports.deleteClient = (req, res, next) => {
+  coursesService.deleteCourse(req.params.id)
+    .then((response) => {
+      res.status(200).json({})
+    })
+    .catch(err => next(err))
+}
